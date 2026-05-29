@@ -1234,8 +1234,8 @@ function gs(num,title,body){
 const l0content={
   p0s1:{num:'1.1',title:'What you need',subtitle:'Everything you need to know before opening lesson 1.',
     html:()=>
-      gs('1','An Anthropic account','Go to <a href="https://claude.ai" target="_blank" style="color:var(--accent)">claude.ai</a> and create an account. Claude Code requires a <strong>Pro plan ($20/month)</strong> or higher. If your company has an Anthropic API contract, ask your IT or AI team about access.')+
-      gs('2','Install Claude Code','Claude Code runs in your terminal. Install it with:<br><br><code style="background:var(--surface2);padding:3px 8px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">npm install -g @anthropic-ai/claude-code</code><br><br>You need Node.js 18 or higher. If you do not have Node.js, download it from nodejs.org first. Once installed, run <code style="background:var(--surface2);padding:2px 6px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">claude</code> to start a session.')+
+      gs('1','An Anthropic account','For personal learning, go to <a href="https://claude.ai" target="_blank" style="color:var(--accent)">claude.ai</a> and create an account — Claude Code requires a <strong>Pro plan ($20/month)</strong> or higher. For work use, request access through your IT or AI team in the organisation.')+
+      gs('2','Run Claude Code from your terminal','Claude Code is already installed on your computer as <code style="background:var(--surface2);padding:2px 6px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">claude.exe</code>. To run it from any terminal window, add it to your PATH by setting an environment variable.<br><br><strong>Windows:</strong><br>1. Open <em>Start</em> and search for <em>Environment Variables</em><br>2. Click <em>Edit the system environment variables</em><br>3. Under <em>User variables</em>, select <em>Path</em> and click <em>Edit</em><br>4. Click <em>New</em> and add:<br><code style="background:var(--surface2);padding:3px 8px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">%USERPROFILE%\\.local\\bin</code><br>5. Click OK and restart your terminal<br><br>Then run <code style="background:var(--surface2);padding:2px 6px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">claude</code> to start a session.')+
       gs('3','Create your first project folder','<code style="background:var(--surface2);padding:3px 8px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">mkdir my-workspace &amp;&amp; cd my-workspace</code><br><br>Then run <code style="background:var(--surface2);padding:2px 6px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">claude</code> inside it. This folder is where your CLAUDE.md, project files, and skills will live.')+
       gs('4','Run your first prompt','Type anything to verify it is working:<br><br><code style="background:var(--surface2);padding:3px 8px;border-radius:4px;font-family:IBM Plex Mono,monospace;font-size:12px">What can you do in this session? What files can you see?</code><br><br>If it responds, you are ready for lesson 1.')+
       '<div style="margin-top:24px;margin-bottom:8px;font-family:\'IBM Plex Mono\',monospace;font-size:9px;font-weight:600;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:10px">Data sensitivity<span style="flex:1;height:1px;background:var(--border)"></span></div>'+
@@ -1354,7 +1354,7 @@ function plCopy(btn,text){
 // ── WHAT'S NEW ────────────────────────────────────────────────────────
 function showReleaseNotes(){
   setActive('nl-release');
-  document.getElementById('breadcrumb').innerHTML='<span onclick="showHome()" style="cursor:pointer">Course overview</span><span style="color:var(--muted2)"> &rsaquo; </span><span class="breadcrumb-current">What\'s new</span>';
+  document.getElementById('breadcrumb').innerHTML='<span class="breadcrumb-current">Releases</span>';
   document.getElementById('topbar-right').innerHTML='';
   document.querySelectorAll('.lesson-item').forEach(el=>el.classList.remove('active'));
   document.getElementById('main-view').innerHTML=`
@@ -1363,7 +1363,7 @@ function showReleaseNotes(){
       <p class="lesson-subtitle">Course updates, new lessons, and improvements.</p>
 
       <div class="section-label">May 2026 \u2014 v1.0 initial</div>
-      ${rn('\u{1F680}','Launched','Claude Code for Everyone course for public usage.','var(--accent)','#fff')}
+      ${rn('\u{1F680}','Launched','Claude Code for Everyone course.','var(--accent)','#fff')}
     </div>`;
   window.scrollTo(0,0);
 }
